@@ -1,0 +1,41 @@
+.not-found {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.msgErro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.msgErro h1 {
+  letter-spacing: 4px;
+  opacity: 32%;
+  font-size: 80px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  padding: 16px 32px;
+  border-radius: 8px;
+  background: #0c5ea1;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 1px;
+  transition: all 0.2s linear;
+  margin: 0 auto;
+  font-weight: 600;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+}

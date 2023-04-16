@@ -1,0 +1,88 @@
+.filme-info {
+  width: 100%;
+  max-width: 680px;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 80px;
+}
+
+.filme-info h1 {
+  text-align: center;
+}
+
+.filme-info img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.filme-info span {
+  line-height: 165%;
+}
+
+.filme-info strong {
+  margin-top: 16px;
+  color: #F3BC26;
+}
+
+.area-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.area-buttons button {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  padding: 16px 32px;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  background: #1c79c5;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FFF;
+  letter-spacing: 1px;
+  transition: all 0.2s linear;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.area-buttons button:hover {
+  transform: scale(0.98);
+  background: #169b5d;
+}
+
+.area-buttons button a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.btnTertiary {
+  display: flex;
+  align-items: center;
+  padding: 4px 16px;
+  color: #1c79c5;
+  border-radius: 16px;
+  width: max-content;
+  margin: 0 auto;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.2s linear;
+}
+
+.btnTertiary:hover {
+  transform: scale(0.98);
+}
+
+@media (max-width:1377px) {
+  .filme-info {
+    max-width: 580px;
+  }
+}

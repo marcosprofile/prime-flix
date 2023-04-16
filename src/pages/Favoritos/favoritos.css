@@ -1,0 +1,133 @@
+.meus-filmes {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  width: 100%;
+  max-width: 680px;
+  padding: 0 24px;
+}
+
+.meus-filmes h1 {
+  text-align: center;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.emptyState span {
+  text-align: center;
+  opacity: 40%;
+  letter-spacing: 0.5px;
+}
+
+.meus-filmes ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+}
+
+.meus-filmes ul li {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-radius: 8px;
+  background: #333;
+}
+
+.meus-filmes ul li span {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.meus-filmes ul li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: #1c79c5;
+  color: #FFF;
+  padding: 4px 12px;
+  border-radius: 16px;
+  transition: all 0.2s linear;
+  letter-spacing: 0.5px;
+}
+
+.meus-filmes ul li a:hover {
+  background: #169b5d;
+}
+
+.meus-filmes ul li div {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  height: 25px;
+}
+
+.meus-filmes ul li div button {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: none;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 16px;
+  transition: all 0.2s linear;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  letter-spacing: 0.5px;
+}
+
+.meus-filmes ul li div button:hover {
+  color: #FFF;
+  background: #ff256e;
+}
+
+@media (max-width: 524px) {
+  .meus-filmes ul li span {
+    width: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .meus-filmes ul li span {
+    width: 100%;
+  }
+
+  .meus-filmes ul li {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+
+  
+}
+
+@media (max-width: 300px) {
+  .meus-filmes ul li {
+    height: auto;
+  }
+  
+  .meus-filmes ul li div {
+    width: 100%;
+  }
+
+  .meus-filmes ul li a, .meus-filmes ul li button {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+}
