@@ -50,6 +50,7 @@
 .meus-filmes ul li a {
   display: flex;
   align-items: center;
+  width: max-content;
   text-decoration: none;
   font-size: 14px;
   font-weight: 700;
