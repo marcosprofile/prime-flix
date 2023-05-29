@@ -28,7 +28,6 @@ function Favoritos() {
       {filmes.length === 0 &&
         <div className="emptyState">
           <span>Você não possui nenhum filme salvo.</span>
-          <Link className="btn" to="/">Ver filmes</Link>
         </div>
       }
       
@@ -45,7 +44,7 @@ function Favoritos() {
           )
         })}
       </ul>
-      <Link className="btnTertiary" to="/">Ver filmes</Link>
+      <Link className="btn" to="/">Ver filmes</Link>
     </div>
   )
 }
