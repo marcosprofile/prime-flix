@@ -45,6 +45,7 @@ function Favoritos() {
           )
         })}
       </ul>
+      <Link className="btnTertiary" to="/">Ver filmes</Link>
     </div>
   )
 }
