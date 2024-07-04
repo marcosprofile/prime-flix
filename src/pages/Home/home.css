@@ -1,13 +1,13 @@
 .container {
-  margin: 0 24px 32px 24px;
+  margin: 112px 24px 32px 24px;
 }
 
 .lista-filmes {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 24px;
   width: 100%;
-  max-width: 680px;
 }
 
 .loading {
@@ -19,6 +19,7 @@
   flex-direction: column;
   gap: 16px;
   width: 100%;
+  max-width: 340px;
   background: #333;
   padding: 24px;
   border-radius: 8px;
@@ -27,6 +28,7 @@
 
 .lista-filmes article h1 {
   text-align: center;
+  height: 100%;
 }
 
 .lista-filmes article img {
@@ -51,4 +53,10 @@
 
 .lista-filmes article a:hover {
   transform: scale(0.98);
+}
+
+@media (max-width: 728px) {
+  .lista-filmes article {
+    max-width: unset;
+  }
 }

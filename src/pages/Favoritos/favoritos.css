@@ -5,7 +5,7 @@
   width: 100%;
   max-width: 680px;
   padding: 0 24px;
-  margin-bottom: 32px;
+  margin-bottom: 112px 0 32px 0;
 }
 
 .meus-filmes h1 {
@@ -83,7 +83,6 @@
   color: #fff;
   padding: 4px 12px;
   border-radius: 16px;
-  transition: all 0.2s linear;
   border: none;
   cursor: pointer;
   transition: all 0.2s linear;
