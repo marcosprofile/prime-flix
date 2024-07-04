@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import api from '../../services/api';
 import './filme.css';
-import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 function Filme() {

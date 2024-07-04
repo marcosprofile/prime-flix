@@ -1,11 +1,14 @@
 header {
-  padding: 16px 40px;
+  padding: 1rem 2.5rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
   background: #333;
-  margin-bottom: 48px;
-  box-shadow: 4px 0px 32px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
 header a {
@@ -37,15 +40,11 @@ header a {
 
 @media (max-width: 768px) {
   header {
-    padding: 16px;
+    padding: 1rem;
   }
 }
 
 @media (max-width: 300px) {
-  header {
-    padding: 16px;
-  }
-
   .logo {
     font-size: 21px;
   }
