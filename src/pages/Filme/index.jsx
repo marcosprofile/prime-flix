@@ -1,8 +1,9 @@
+import './filme.css';
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import api from '../../services/api';
-import './filme.css';
 import { toast } from 'react-toastify';
+import { Button } from '../../components/Button';
+import api from '../../services/api';
 
 function Filme() {
   const { id } = useParams();
@@ -61,25 +62,28 @@ function Filme() {
   }
 
   return (
-    <div className="filme-info">
+    <section>
+      <div className="container">
+        <div className="filme-info">
+          <h1>{filme.title}</h1>
+          <img src={`https://image.tmdb.org/t/p/original/${filme.backdrop_path}`} alt={filme.title} />
+          
+          <h3>Sinopse</h3>
+          <span>{filme.overview}</span>
+          <strong>Avaliação: {filme.vote_average} / 10</strong>
 
-      <h1>{filme.title}</h1>
-      <img src={`https://image.tmdb.org/t/p/original/${filme.backdrop_path}`} alt={filme.title} />
-      
-      <h3>Sinopse</h3>
-      <span>{filme.overview}</span>
-      <strong>Avaliação: {filme.vote_average} / 10</strong>
-
-      <div className="area-buttons">
-        <button onClick={salvarFilme}>Salvar</button>
-        <button>
-          <a target="blank" rel="external" href={`https://youtube.com/results?search_query=${filme.title}`}>
-            Trailer
-          </a>
-        </button>
+          <div className="area-buttons">
+            <Button variant="secondary" onClick={salvarFilme}>Salvar</Button>
+            <Link to={`https://youtube.com/results?search_query=${filme.title}`} target="blank" rel="external">
+              <Button variant="secondary">Trailer</Button>
+            </Link>
+          </div>
+          <Link to="/">
+            <Button variant="tertiary">Ver filmes</Button>
+          </Link>
+        </div>
       </div>
-      <Link className="btnTertiary" to="/">Ver filmes</Link>
-    </div>
+    </section>
   )
 }
 

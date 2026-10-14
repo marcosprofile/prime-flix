@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --white: oklch(1 0 0);
+  --black: oklch(0 0 0);
+
+  --canvas: oklch(14.1% 0.005 285.823);
+  --surface: oklch(21% 0.006 285.885);
+  --accent: oklch(58.8% 0.158 241.966);
+  --accent-hover: oklch(50% 0.134 242.749);
+  --accent-soft: oklch(68.5% 0.169 237.323);
+  --success: oklch(59.6% 0.145 163.225);
+  --danger: oklch(57.7% 0.245 27.325);
+  --warning: oklch(87.9% 0.169 91.605);
+  --font-title: "Libre Franklin", sans-serif;
+  --font-text: "Inter", sans-serif;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -5,9 +23,26 @@
 }
 
 body {
-  font-family: 'Open sans', sans-serif;
-  background: #121212;
-  color: #fff;
+  font-family: var(--font-text);
+  background: var(--canvas);
+  color: var(--white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+  line-height: 1.4;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  width: 100%;
+  padding: 4rem 1.5rem;
 }
 
 .app {
@@ -16,4 +51,10 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
 }

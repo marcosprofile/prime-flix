@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
-import api from '../../services/api';
-import { Link } from 'react-router-dom'
 import './home.css'
+import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom'
+import { Button } from "../../components/Button";
+import api from '../../services/api';
 
-// URL da API: /movie/now_playing?api_key=5d6e15a55376633dc9c022322667ed78&language=pt-BR
+const apiKey = process.env.REACT_APP_API_KEY
 
 function Home() {
   const [filmes, setFilmes] = useState([]);
@@ -12,15 +13,15 @@ function Home() {
   useEffect(() => {
 
     async function loadFilmes() {
-      const response = await api.get("movie/now_playing?api_key=5d6e15a55376633dc9c022322667ed78&language=pt-BR", {
+      const response = await api.get(`movie/popular`, {
         params: {
-          api_key: "5d6e15a55376633dc9c022322667ed78",
+          api_key: apiKey,
           language: "pt-BR",
           page: 1
         }
       })
 
-      setFilmes(response.data.results.slice(0, 10));
+      setFilmes(response.data.results.slice(0, 20));
       setLoading(false);
 
     }
@@ -38,19 +39,25 @@ function Home() {
   }
 
   return (
-    <div className="container">
-      <div className="lista-filmes">
-        {filmes.map((filme) => {
-          return (
-            <article key={filme.id}>
-              <h1>{filme.title}</h1>
-              <img src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt={filme.title} />
-              <Link to={`/filme/${filme.id}`}>Ver detalhes</Link>
-            </article>
-          )
-        })}
+    <section>
+      <div className="container">
+        <div className="lista-filmes">
+          {filmes.map((filme) => {
+            return (
+              <article key={filme.id}>
+                <h3>{filme.title}</h3>
+                <img src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt={filme.title} />
+                <Link to={`/filme/${filme.id}`}>
+                  <Button variant="secondary">
+                    Ver detalhes
+                  </Button>
+                </Link>
+              </article>
+            )
+          })}
+        </div>
       </div>
-    </div>
+    </section>
   )
 }
 

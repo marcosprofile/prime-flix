@@ -1,62 +1,67 @@
-.container {
-  margin: 112px 24px 32px 24px;
-}
-
 .lista-filmes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
   width: 100%;
+
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    background: var(--surface);
+    padding: 1rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 .5rem 1rem rgb(from var(--dark) r g b / 16%);
+
+    h3 {
+      text-align: center;
+      height: 100%;
+    }
+
+    img {
+      width: 100%;
+      max-height: 400px;
+      border-radius: .5rem;
+      object-fit: cover;
+    }
+
+    .button { width: 100% }
+  }
 }
 
 .loading {
   text-align: center;
 }
 
-.lista-filmes article {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  width: 100%;
-  max-width: 340px;
-  background: #333;
-  padding: 24px;
-  border-radius: 8px;
-  box-shadow: 10px 10px 24px rgba(0,0,0, 0.25);
+@media (max-width: 1120px) {
+  .lista-filmes {
+    grid-template-columns: repeat(2, 1fr);
+
+    article {
+      img { max-height: 520px }
+    }
+  }
 }
 
-.lista-filmes article h1 {
-  text-align: center;
-  height: 100%;
+@media (max-width: 768px) {
+  .lista-filmes {
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+
+    article {
+      padding: .75rem;
+      gap: .5rem;
+      border-radius: 1.25rem;
+      
+      img { max-height: 440px }
+      a { font-size: .875rem }
+    }
+  }
 }
 
-.lista-filmes article img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.lista-filmes article a {
-  text-decoration: none;
-  background: #1c79c5;
-  color: #fff;
-  font-size: 16px;
-  text-align: center;
-  text-transform: uppercase;
-  padding: 16px;
-  border-radius: 8px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  transition: all 0.2s linear;
-  margin-top: 8px;
-}
-
-.lista-filmes article a:hover {
-  transform: scale(0.98);
-}
-
-@media (max-width: 728px) {
-  .lista-filmes article {
-    max-width: unset;
+@media (max-width: 500px) {
+  .lista-filmes article img {
+    max-height: 248px;
   }
 }
