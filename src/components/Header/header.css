@@ -1,12 +1,14 @@
 header {
   width: 100%;
-  background: var(--surface);
+  background: rgb(from var(--surface) r g b / 60%);
+  backdrop-filter: blur(8px);
   box-shadow: 0 .75rem 1.25rem rgb(from var(--black) r g b / 16%);
   position: sticky;
   top: 0;
   left: 0;
   z-index: 2;
   padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border);
 
   .container {
     display: flex;

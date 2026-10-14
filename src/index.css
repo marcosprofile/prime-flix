@@ -6,6 +6,7 @@
 
   --canvas: oklch(14.1% 0.005 285.823);
   --surface: oklch(21% 0.006 285.885);
+  --border: oklch(27.4% 0.006 286.033);
   --accent: oklch(58.8% 0.158 241.966);
   --accent-hover: oklch(50% 0.134 242.749);
   --accent-soft: oklch(68.5% 0.169 237.323);

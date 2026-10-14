@@ -24,6 +24,7 @@
       padding: .5rem 1rem .5rem .5rem;
       border-radius: .875rem;
       background: var(--surface);
+      border: 1px solid var(--border);
 
       img {
         width: 100%;
