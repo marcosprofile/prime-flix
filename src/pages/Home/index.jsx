@@ -48,7 +48,7 @@ function Home() {
                 <h3>{filme.title}</h3>
                 <img src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt={filme.title} />
                 <Link to={`/filme/${filme.id}`}>
-                  <Button variant="secondary">
+                  <Button variant="secondary" full>
                     Ver detalhes
                   </Button>
                 </Link>
